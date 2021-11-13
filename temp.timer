@@ -1,0 +1,16 @@
+# ***temp.timer***
+[Unit]
+Description=timer para almacenamiento de temperatura cada segundo
+
+[Timer]
+
+OnStartupSec=0s
+OnActiveSec=0s
+OnUnitActiveSec=1s
+OnUnitInactiveSec=0s
+OnBootSec=0s
+AccuracySec=500ms
+
+
+[Install]
+WantedBy=timers.target

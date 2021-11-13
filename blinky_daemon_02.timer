@@ -1,0 +1,15 @@
+# ***blinky_daemon_02.timer***
+[Unit]
+Description=timer para blinky 5Hz en puerto GPIO27
+
+[Timer]
+
+OnBootSec=0s
+OnStartupSec=0s
+OnActiveSec=0s
+OnUnitActiveSec=200ms
+OnUnitInactiveSec=0s
+AccuracySec=1us
+
+[Install]
+WantedBy=timers.target

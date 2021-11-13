@@ -1,0 +1,18 @@
+# ***temp.service***
+[Unit]
+Description=servicio para almacenar la temperatura cada segundo
+StartLimitInterval=0
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/home/pi/proyecto_02_03/02_part/temp_sen.sh
+User=pi
+WorkingDirectory=/home/pi/proyecto_02_03/02_part
+Restart=always
+RestartSec=0s
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
